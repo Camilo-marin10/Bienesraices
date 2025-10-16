@@ -1,1 +1,25 @@
-h1 Registro de usuario
+extends ../layout/index
+
+block contenido 
+    .py-10 
+        h1.text-4xl.my-10.font-extrabold.text-center Bienes Raices
+            span.font-normal SENA
+        h2.text-center.text-2xl.font-extrabold=tituloPagina
+        .mt-8.mx-auto.max-w-md 
+            .bg-white.py-8.px-4.shadow
+                form.space-y-5(action="#", method="post")
+                    div     
+                        label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="name") Nombre
+                        input#name.w-full.px-3.py-2.border.border-gray-300.rounded-mb.placeholder-gary-400(type="text" placeholder="Ingrese su nombre" name="name")
+                    div     
+                        label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="email") Correo
+                        input#email.w-full.px-3.py-2.border.border-gray-300.rounded-mb.placeholder-gary-400(type="email" placeholder="Ingrese su email" name="email")
+                    div     
+                        label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="password") Contraseña
+                        input#password.w-full.px-3.py-2.border.border-gray-300.rounded-mb.placeholder-gary-400(type="password" placeholder="Ingrese su contraseña" name="password")
+                    div     
+                        label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="repeat-password") Repite tu contraseña
+                        input#repeat-password.w-full.px-3.py-2.border.border-gray-300.rounded-mb.placeholder-gary-400(type="password" placeholder="Repita su contraseña" name="password")
+                    input(class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 cursor-pointer" type="submit" value="Registrate")
+                    div.flex.items-center.justify-center
+                        a.text-gray-500.text-xs(href="login") ¿Ya tiene cuenta? inicie sesion

@@ -8,6 +8,9 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", "./views");
 
+//Definir la ruta de el public
+app.use(express.static("public"));
+
 // Routing
 app.use("/auth", usuarioRoutes);
 
