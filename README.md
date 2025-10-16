@@ -17,3 +17,9 @@ Instalar dependencias
 ```bash
   npm run dev
 ```
+
+Modo de desarrollo para los CSS
+
+```bash
+  npm run css
+```
