@@ -8,10 +8,14 @@ const app = express();
 //conexion a la db
 try {
   await db.authenticate();
+  db.sync();
   console.log("La conexion es correcta");
 } catch (error) {
   console.error("No se puede conectar", error);
 }
+
+//Habilitar la lectura de los formularios
+app.use(express.urlencoded({ extended: true }));
 
 // Habilitar Pug
 app.set("view engine", "pug");
